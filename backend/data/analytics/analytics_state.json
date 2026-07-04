@@ -1,0 +1,10 @@
+{
+  "total_requests": 4,
+  "total_latency_ms": 6295.269,
+  "total_risk_score": 3.38,
+  "total_hallucinations": 1,
+  "total_validation_success": 3,
+  "total_alerts_generated": 4,
+  "total_high_risk_cases": 4,
+  "total_pipeline_execution_time_ms": 6295.269
+}

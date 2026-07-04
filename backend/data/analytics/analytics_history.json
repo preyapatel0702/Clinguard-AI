@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": "2026-07-03T10:31:54.400517+00:00",
+    "latency_ms": 1410.715,
+    "risk_score": 0.81,
+    "hallucination_detected": false,
+    "validation_success": true,
+    "alerts_generated": 1,
+    "high_risk": true,
+    "pipeline_execution_time_ms": 1410.715,
+    "correlation_id": ""
+  },
+  {
+    "timestamp": "2026-07-03T12:38:02.782276+00:00",
+    "latency_ms": 875.635,
+    "risk_score": 0.81,
+    "hallucination_detected": false,
+    "validation_success": true,
+    "alerts_generated": 1,
+    "high_risk": true,
+    "pipeline_execution_time_ms": 875.635,
+    "correlation_id": ""
+  },
+  {
+    "timestamp": "2026-07-03T12:41:55.747722+00:00",
+    "latency_ms": 3705.448,
+    "risk_score": 0.81,
+    "hallucination_detected": false,
+    "validation_success": true,
+    "alerts_generated": 1,
+    "high_risk": true,
+    "pipeline_execution_time_ms": 3705.448,
+    "correlation_id": ""
+  },
+  {
+    "timestamp": "2026-07-03T14:14:05.366649+00:00",
+    "latency_ms": 303.471,
+    "risk_score": 0.95,
+    "hallucination_detected": true,
+    "validation_success": false,
+    "alerts_generated": 1,
+    "high_risk": true,
+    "pipeline_execution_time_ms": 303.471,
+    "correlation_id": ""
+  }
+]
