@@ -1,4 +1,4 @@
-# ClinGuard-AI
+# 🩺 ClinGuard-AI
 
 ClinGuard-AI is a clinical AI safety platform designed to detect hallucinations in AI-generated medical responses, validate clinical claims, assess clinical risk, and generate safe, explainable outputs using a multi-agent AI architecture.
 
@@ -25,58 +25,98 @@ ClinGuard-AI/
 │   ├── services/
 │   ├── tests/
 │   ├── tools/
+│   ├── data/
 │   └── main.py
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
+│   ├── .env.example
+│   ├── README.md
+│   ├── LICENSE.md
+│   ├── banner.png
 │   ├── package.json
-│   └── vite.config.ts
+│   ├── package-lock.json
+│   ├── vite.config.ts
+│   ├── eslint.config.js
+│   ├── postcss.config.js
+│   ├── tsconfig.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.node.json
+│   └── index.html
 │
 ├── .gitignore
 ├── README.md
-└── .env.example
+└── LICENSE.md
 ```
 
 ---
 
 # Backend
 
+### Technologies
+
 - FastAPI
 - Python
 - Pydantic
 - Multi-Agent Clinical AI Pipeline
 
-### Pipeline
+### AI Pipeline
 
 ```text
 InterceptorAgent
-      ↓
+        ↓
 DetectorAgent
-      ↓
+        ↓
 ValidatorAgent
-      ↓
+        ↓
 RiskAgent
-      ↓
+        ↓
 GeneratorAgent
-      ↓
+        ↓
 EvaluatorAgent
-      ↓
+        ↓
 MemoryAgent
-      ↓
+        ↓
 AlertAgent
 ```
+
+### Core Features
+
+- Medical Entity Extraction
+- Hallucination Detection
+- Clinical Claim Validation
+- Clinical Risk Assessment
+- Safe Response Generation
+- Explainability Engine
+- Clinical Audit Reports
+- Analytics & Monitoring
+- Session Memory
+- Alert Generation
+- Operational Dashboard APIs
 
 ---
 
 # Frontend
 
+### Technologies
+
 - React
 - TypeScript
 - Vite
+- Tailwind CSS
 - Modern Dashboard UI
-- Clinical Monitoring Dashboard
-- Analytics & Explainability Views
+
+### Features
+
+- Clinical Dashboard
+- Risk Analytics
+- Hallucination Monitoring
+- Validation Analytics
+- Agent Performance Dashboard
+- System Health Monitoring
+- Explainability Reports
+- Audit Report Viewer
 
 ---
 
@@ -85,8 +125,9 @@ AlertAgent
 - ✅ Phase 1–8B Completed
 - ✅ Phase 9 – Explainability & Clinical Audit
 - ✅ Phase 10 – Analytics & Monitoring
-- ✅ Backend Deployed
-- ✅Frontend Deployed
+- ✅ Backend Successfully Deployed on Render
+- ✅Frontend Successfully Deployed on Vercel
+
 
 ---
 
@@ -100,13 +141,13 @@ pip install -r backend/requirements.txt
 uvicorn backend.main:app --reload
 ```
 
-Backend:
+Backend URL
 
 ```
 http://localhost:8000
 ```
 
-Swagger API:
+Swagger Documentation
 
 ```
 http://localhost:8000/docs
@@ -124,7 +165,7 @@ npm install
 npm run dev
 ```
 
-Frontend:
+Frontend URL
 
 ```
 http://localhost:5173
@@ -144,7 +185,23 @@ http://localhost:5173
 
 ---
 
+# API Documentation
+
+Swagger UI
+
+```
+/docs
+```
+
+---
+
 # Contributors
 
-- **Preya Patel** — Backend Development & AI Systems
-- **Riya Patel** — Frontend Development & UI
+- **Preya Patel** — Backend Development, AI Systems & Architecture
+- **Riya Patel** — Frontend Development & UI/UX
+
+---
+
+# License
+
+This project is licensed under the MIT License.
