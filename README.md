@@ -1,10 +1,12 @@
 # ClinGuard-AI
 
-ClinGuard-AI is a clinical AI safety platform designed to detect hallucinations in AI-generated medical responses, validate clinical claims, assess risk, and generate safer, explainable outputs using a multi-agent architecture.
+ClinGuard-AI is a clinical AI safety platform designed to detect hallucinations in AI-generated medical responses, validate clinical claims, assess clinical risk, and generate safe, explainable outputs using a multi-agent AI architecture.
 
-## Repository Structure
+---
 
-```
+# Repository Structure
+
+```text
 ClinGuard-AI/
 │
 ├── backend/
@@ -25,20 +27,29 @@ ClinGuard-AI/
 │   ├── tools/
 │   └── main.py
 │
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.ts
+│
 ├── .gitignore
-└── README.md
+├── README.md
+└── .env.example
 ```
 
-## Backend
+---
+
+# Backend
 
 - FastAPI
 - Python
 - Pydantic
-- Multi-Agent Pipeline
+- Multi-Agent Clinical AI Pipeline
 
-Pipeline:
+### Pipeline
 
-```
+```text
 InterceptorAgent
       ↓
 DetectorAgent
@@ -56,21 +67,84 @@ MemoryAgent
 AlertAgent
 ```
 
-## Current Status
+---
+
+# Frontend
+
+- React
+- TypeScript
+- Vite
+- Modern Dashboard UI
+- Clinical Monitoring Dashboard
+- Analytics & Explainability Views
+
+---
+
+# Current Status
 
 - ✅ Phase 1–8B Completed
-- ✅ Phase 9 Explainability
-- ✅ Phase 10 Analytics & Monitoring
+- ✅ Phase 9 – Explainability & Clinical Audit
+- ✅ Phase 10 – Analytics & Monitoring
+- ✅ Backend Deployed
+- ✅Frontend Deployed
 
-## Running the Backend
+---
+
+# Running the Backend
 
 ```bash
 cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+
+pip install -r backend/requirements.txt
+
+uvicorn backend.main:app --reload
 ```
 
-## Contributors
+Backend:
 
-- Preya Patel — Backend Development
-- Riya Patel — Frontend Development
+```
+http://localhost:8000
+```
+
+Swagger API:
+
+```
+http://localhost:8000/docs
+```
+
+---
+
+# Running the Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend:
+
+```
+http://localhost:5173
+```
+
+---
+
+# Deployment
+
+### Backend
+
+- Render
+
+### Frontend
+
+- Vercel
+
+---
+
+# Contributors
+
+- **Preya Patel** — Backend Development & AI Systems
+- **Riya Patel** — Frontend Development & UI
