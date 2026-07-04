@@ -1,44 +1,64 @@
+# ==========================
 # Python
+# ==========================
 __pycache__/
 *.py[cod]
-*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
 
 # Virtual Environments
-venv/
 .venv/
+venv/
 env/
-ENV/
 
-# Environment Variables
+# Python Environment Files
 .env
-.env.*
+.env.local
+.env.production
+.env.development
 
+# ==========================
+# Node / React / Vite
+# ==========================
+node_modules/
+dist/
+.vite/
+
+# Frontend Environment Files
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/.env.development
+
+# ==========================
 # IDE
+# ==========================
 .vscode/
 .idea/
+*.swp
 
-# OS
+# ==========================
+# Operating System
+# ==========================
 .DS_Store
 Thumbs.db
 
-# Testing
-.pytest_cache/
-.coverage
-coverage.xml
-htmlcov/
-
+# ==========================
 # Logs
+# ==========================
 *.log
 
-# Python cache
-.mypy_cache/
+# ==========================
+# Local Data
+# ==========================
+backend/data/*.db
+backend/data/*.sqlite
+backend/data/*.sqlite3
 
-# Runtime generated files
-backend/data/analytics/*.json
-backend/data/sessions.json
-backend/data/audit_reports.json
-
-# Build
-build/
-dist/
-*.egg-info/
+# Keep JSON datasets
+!backend/data/*.json
