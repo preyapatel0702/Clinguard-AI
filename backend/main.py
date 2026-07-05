@@ -54,9 +54,12 @@ app.add_middleware(CorrelationIdMiddleware)
 app.add_middleware(
     AnalyticsMiddleware,
     analytics_service=get_analytics(),
-    tracked_paths=("/analyze", "/pipeline"),
+    tracked_paths=(
+        "/analyze",
+        "/pipeline",
+        "/chat/messages",
+    ),
 )
-
 # Include API endpoints router
 app.include_router(router)
 
