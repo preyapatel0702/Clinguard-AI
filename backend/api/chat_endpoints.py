@@ -92,12 +92,21 @@ async def post_chat_messages(request: ChatRequest):
             detail=f"Pipeline execution failed: {str(exc)}",
         )
 
-    return ChatResponse(
-        role="assistant",
-        reply=analyze_response.safe_response,
-        session_id=request.session_id,
-        risk_level=analyze_response.risk_level,
-        risk_score=analyze_response.risk_score,
-        alerts=[alert.model_dump() for alert in analyze_response.alerts],
-        analysis=analyze_response.model_dump(),
-    )
+    analysis = analyze_response.model_dump()
+
+    return {
+        "role": "assistant",
+        "reply": analyze_response.safe_response,
+        "session_id": request.session_id,
+    
+        "risk_level": analyze_response.risk_level,
+        "risk_score": analyze_response.risk_score,
+    
+        "hallucination_detected": analyze_response.hallucination_detected,
+    
+        "validated_claims": analysis.get("validated_claims", []),
+    
+        "alerts": [a.model_dump() for a in analyze_response.alerts],
+    
+        "analysis": analysis,
+    }
