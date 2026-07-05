@@ -10,6 +10,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 from backend.api.endpoints import router
 from backend.api.chat_endpoints import router as chat_router
 from backend.observability.middleware import LoggingMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 
 # ---------------- Phase 10 ----------------
 from backend.dependencies import get_analytics
@@ -30,6 +31,19 @@ app = FastAPI(
     version="0.3.0"
 )
 
+# Allow frontend applications to access the API
+origins = [
+    "http://localhost:5173",                 # Local Vite frontend
+    "https://clinguard-ai-frontend.vercel.app",  # Production frontend
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Add logging middleware
 app.add_middleware(LoggingMiddleware)
 
