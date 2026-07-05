@@ -179,6 +179,11 @@ if _STARLETTE_AVAILABLE:
                 response.body_iterator = _body_iter()
 
                 payload = json.loads(body.decode())
+
+                # If this is a ChatResponse, extract the nested AnalyzeResponse
+                if isinstance(payload, dict) and "analysis" in payload:
+                    payload = payload["analysis"]
+                
                 self._push_snapshot(payload, latency_ms)
             except (json.JSONDecodeError, UnicodeDecodeError) as exc:
                 # Response body wasn't JSON (e.g. file export) — nothing to record.
